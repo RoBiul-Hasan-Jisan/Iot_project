@@ -43,7 +43,7 @@ disease_classes = [
 
 disease_keywords = ["blight", "rust", "scab", "spot", "mildew", "virus", "mold", "mites", "black_rot"]
 
-disease_model_path = "D:/iot/best_plantdoc_model.pth"
+disease_model_path = "best_plantdoc_model.pth"
 
 disease_model = models.efficientnet_b0(weights=None)
 disease_model.classifier[1] = torch.nn.Linear(disease_model.classifier[1].in_features, len(disease_classes))
